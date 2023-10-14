@@ -32,6 +32,8 @@ import { CollectorPerformerModule } from './collectorperformer/collectorperforme
 import { AlbumBandModule } from './albumband/albumband.module';
 import { AlbumMusicianModule } from './albummusician/albummusician.module';
 
+
+console.log('ENV', process.env.DB_HOST)
 @Module({
   imports: [  
     TypeOrmModule.forRoot({
@@ -40,7 +42,7 @@ import { AlbumMusicianModule } from './albummusician/albummusician.module';
       port: 5432,
       username: 'postgres',
       password: 'postgres',
-      database: 'vinyls',
+      database: 'vynils',
       entities: [Album, CollectorAlbum, Band, Collector, Comment, Musician, Performer, PerformerPrize, Prize, Track,],
       dropSchema: true,
       synchronize: true,
