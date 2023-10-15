@@ -8,7 +8,7 @@ services:
     volumes:
       - ".:/usr/src/app"
     env_file:
-      - .env
+      - .env.dev
     ports:
       - "3000:3000"
     depends_on:
@@ -26,5 +26,19 @@ services:
       - "./data/postgres:/var/lib/postgresql"
     ports:
       - "5432:5432"
+    networks:
+      - default
+    
+  postgres-ui:
+    image: dpage/pgadmin4
+    env_file:
+      - .env.pg
+    container_name: pgadmin-web
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    links:
+      - db
     networks:
       - default
