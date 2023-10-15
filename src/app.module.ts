@@ -40,7 +40,7 @@ import { AlbumMusicianModule } from './albummusician/albummusician.module';
       port: 5432,
       username: 'postgres',
       password: 'postgres',
-      database: 'vinyls',
+      database: 'vynils',
       entities: [Album, CollectorAlbum, Band, Collector, Comment, Musician, Performer, PerformerPrize, Prize, Track,],
       dropSchema: true,
       synchronize: true,
