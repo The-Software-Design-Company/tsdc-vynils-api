@@ -2,6 +2,9 @@
   "name": "vinyls-backend-miso",
   "private": true,
   "version": "1.0.1",
+  "engines": {
+    "node": "12.22.12"
+  },
   "description": "Vinyls Backend MISO",
   "license": "MIT",
   "scripts": {
@@ -68,9 +71,6 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node",
-    "engines": {
-      "node": "12.22.12"
-    }
+    "testEnvironment": "node"
   }
 }
