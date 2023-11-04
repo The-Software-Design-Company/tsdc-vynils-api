@@ -51,7 +51,7 @@ const connectionConfig:any = {
     Prize,
     Track,
   ],
-  dropSchema: true,
+  dropSchema: process.env.DEBUG === "true",
   synchronize: true,
   keepConnectionAlive: true,
   migrations: [__dirname + '/migration/**/*{.ts,.js}'],
