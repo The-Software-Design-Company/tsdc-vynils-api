@@ -31,6 +31,7 @@ import { BandAlbumModule } from './bandalbum/bandalbum.module';
 import { CollectorPerformerModule } from './collectorperformer/collectorperformer.module';
 import { AlbumBandModule } from './albumband/albumband.module';
 import { AlbumMusicianModule } from './albummusician/albummusician.module';
+import { HealthModule } from './health/health.module';
 
 const connectionConfig:any = {
   type: 'postgres',
@@ -91,6 +92,7 @@ if (sslAllowed) {
     CollectorPerformerModule,
     AlbumBandModule,
     AlbumMusicianModule,
+    HealthModule,
   ],
 })
 export class AppModule {}
